@@ -29,7 +29,7 @@ const LoginScreen = ({navigation}) => {
 
   const [phoneCountryCode, setPhoneCountryCode] = useState('IN');
   const [showPhoneCountryPicker, setShowPhoneCountryPicker] = useState(false);
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('+91');
   const phoneInput = useRef(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView className="flex-1 bg-primary">
       {/* Top Half ImageBackground with Carousel */}
-      <ScrollView>
+      <ScrollView >
         <ImageBackground
           source={images[currentIndex]}
           className="h-96 justify-center" // Set a fixed height for the image
@@ -73,7 +73,7 @@ const LoginScreen = ({navigation}) => {
         </ImageBackground>
 
         {/* Bottom Half for Input Fields and Buttons */}
-        <View className="flex-1 px-6 pt-6 rounded-t-3xl bg-white">
+        <View className="flex-1 px-6 pt-6 -mt-4 rounded-t-3xl bg-white">
           <Text className="font-bold text-[24px] text-primary text-center">
             Get Started with DOJ
           </Text>
@@ -93,40 +93,40 @@ const LoginScreen = ({navigation}) => {
 
           <View className="flex-row space-x-3 mb-4">
             {/* Country Code Input Field */}
-            <View className="flex-1 max-w-[30%] border border-gray-300 rounded-lg">
+            <View className="flex-1 max-w-[30%] border-2 border-gray-200 rounded-2xl">
               <PhoneInput
                 ref={phoneInput}
-                className="p-2 flex justify-center"
+                className="p-2 flex justify-center text-black"
                 initialValue={phoneNumber}
                 initialCountry={phoneCountryCode.toLowerCase()}
                 onPressFlag={() => setShowPhoneCountryPicker(true)}
                 onChangePhoneNumber={text => setPhoneNumber(text)}
               />
 
-              <CountryPicker
+              {/* <CountryPicker
                 countryCode={phoneCountryCode}
                 visible={showPhoneCountryPicker}
                 onSelect={handleCountrySelect}
                 onClose={() => setShowPhoneCountryPicker(false)}
                 withFlagButton={false}
                 withFilter
-              />
+              /> */}
             </View>
 
             {/* Mobile Number Input Field */}
-            <View className="flex-1 border border-gray-300 rounded-lg">
+            <View className="flex-1 border-2 border-gray-200 rounded-2xl shadow-inner bg-white">
               <TextInput
                 keyboardType="numeric"
                 placeholder="Enter Mobile No."
                 placeholderTextColor="gray"
                 maxLength={10}
-                className="text-xl p-3"
+                className="text-lg p-2 text-black"
               />
             </View>
           </View>
 
           {/* Login Button */}
-          <CustomButton label="Login" onPress={() => {}} />
+          <CustomButton label="Login" onPress={() => {navigation.navigate('OtpVerification')}} />
 
           <Text className="text-center text-[#757575] font-medium">
             By continuing you agree to our Terms of use & Privacy Policy
