@@ -29,10 +29,10 @@ const OtpVerificationScreen = ({ navigation }) => {
   return (
     <View className="flex-1 bg-primary justify-center items-center">
       {/* Main White Container */}
-      <View className="bg-white w-[90%] rounded-3xl p-6 shadow-lg">
-        <Text className="text-center text-xl font-semibold text-primary mb-4">Phone Verification</Text>
+      <View className="bg-white w-[90%] rounded-[30px] p-6 shadow-lg">
+        <Text className="text-center text-xl font-semibold text-primary mb-8">Phone Verification</Text>
         
-        <Text className="text-center text-gray-700 mb-4">
+        <Text className="text-center text-gray-700 mb-2">
           We have sent a verification code to
         </Text>
         <Text className="text-center text-green-600 font-medium mb-6">+91 9876543210</Text>
@@ -67,7 +67,7 @@ const OtpVerificationScreen = ({ navigation }) => {
         </TouchableOpacity>
 
         {/* Submit Button */}
-        <CustomButton label="Submit" onPress={() => {navigation.navigate('OtpVerification')}} />
+        <CustomButton label="Submit" onPress={() => {navigation.navigate('Main')}} />
       </View>
     </View>
   );

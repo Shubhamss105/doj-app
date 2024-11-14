@@ -47,10 +47,9 @@ const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView className="flex-1 bg-primary">
       {/* Top Half ImageBackground with Carousel */}
-      <ScrollView >
         <ImageBackground
           source={images[currentIndex]}
-          className="h-96 justify-center" // Set a fixed height for the image
+          className="h-80 justify-center object-cover"
           resizeMode="cover">
           {/* Skip Button */}
           <TouchableOpacity
@@ -128,11 +127,11 @@ const LoginScreen = ({navigation}) => {
           {/* Login Button */}
           <CustomButton label="Login" onPress={() => {navigation.navigate('OtpVerification')}} />
 
-          <Text className="text-center text-[#757575] font-medium">
+          <Text className="text-center text-[#757575] font-medium -mt-2">
             By continuing you agree to our Terms of use & Privacy Policy
           </Text>
 
-          <View className="flex-row items-center my-7">
+          <View className="flex-row items-center my-5">
             {/* Left Line */}
             <View className="flex-1 h-[1px] bg-[#BFBFBF]" />
 
@@ -146,7 +145,7 @@ const LoginScreen = ({navigation}) => {
           </View>
 
           {/* Social Login Buttons */}
-          <View className="flex-row justify-center space-x-6 my-5">
+          <View className="flex-row justify-center space-x-6 my-3">
             <TouchableOpacity
               onPress={() => {}}
               className="border border-gray-300 rounded-xl px-3 py-3">
@@ -164,11 +163,11 @@ const LoginScreen = ({navigation}) => {
             </TouchableOpacity>
           </View>
 
-          <View className="flex-row justify-center mt-5 mb-10 space-x-4">
+          <View className="flex-row justify-center mt-5 mb-8 space-x-2">
             {/* Driver SignUp Button */}
             <TouchableOpacity
               onPress={() => {}}
-              className="border-2 border-primary bg-transparent rounded-lg py-2 w-1/2">
+              className="border-2 border-primary bg-transparent rounded-xl py-2 w-1/2">
               <Text className="text-primary text-md font-semibold text-center">
                 Driver SignUp
               </Text>
@@ -177,14 +176,13 @@ const LoginScreen = ({navigation}) => {
             {/* Partner SignUp Button */}
             <TouchableOpacity
               onPress={() => {}}
-              className="border-2 border-primary bg-transparent rounded-lg py-2 w-1/2">
+              className="border-2 border-primary bg-transparent rounded-xl py-2 w-1/2">
               <Text className="text-primary text-md font-semibold text-center">
                 Partner SignUp
               </Text>
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 };
