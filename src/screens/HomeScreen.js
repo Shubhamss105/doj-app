@@ -11,7 +11,7 @@ import {LinearGradient} from 'react-native-linear-gradient';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FoodTypeSelector from '../components/Home/FoodTypeSelector';
-import BannerSlider from '../components/Home/BannerSlider.js';
+import ImageBanner from '../components/Home/ImageBanner.js';
 import FoodMenuFlatList from '../components/Home/FoodMenuFlatList.js';
 
 const MyComponent = () => {
@@ -58,11 +58,13 @@ const MyComponent = () => {
       
       <ScrollView className='-mt-6'>
         <View className=' bg-white rounded-t-3xl'>
-        {/* <BannerSlider/> */}
-        <Text className='text-[#3D3D3D] text-lg font-semibold text-center'>
+        <ImageBanner/>
+        <Text className='text-[#757575] text-lg font-semibold text-center mt-4'>
           What would you like to order
         </Text>
+
         <FoodMenuFlatList/>
+
         </View>
       </ScrollView>
     </SafeAreaView>
