@@ -16,7 +16,7 @@ import GoogleSVG from '../assets/images/misc/google.svg';
 import FacebookSVG from '../assets/images/misc/facebook.svg';
 import TwitterSVG from '../assets/images/misc/twitter.svg';
 
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../components/UI/CustomButton';
 
 const images = [
   require('../assets/images/loginImage1.png'),

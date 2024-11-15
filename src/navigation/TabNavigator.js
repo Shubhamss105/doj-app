@@ -55,10 +55,10 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Takeaway" component={TakeawayScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Delivery" component={DeliveryScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Wishlist" component={WishlistScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Reorder" component={ReorderScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="Takeaway" component={TakeawayScreen} />
+      <Tab.Screen name="Delivery" component={DeliveryScreen} />
+      <Tab.Screen name="Wishlist" component={WishlistScreen}/>
+      <Tab.Screen name="Reorder" component={ReorderScreen}  />
     </Tab.Navigator>
   );
 };

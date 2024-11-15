@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../components/UI/CustomButton';
 
 const OtpVerificationScreen = ({ navigation }) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
