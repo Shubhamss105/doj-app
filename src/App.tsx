@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import AuthStack from './navigation/AuthStack';
 import SplashScreen from './screens/SplashScreen';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 enableScreens();
 
@@ -16,7 +17,7 @@ function App() {
   }, []);
 
   return (
-    <NavigationContainer>
+      <NavigationContainer>
       {isSplashVisible ? <SplashScreen /> : <AuthStack />}
     </NavigationContainer>
   );

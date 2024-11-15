@@ -11,14 +11,17 @@ import {LinearGradient} from 'react-native-linear-gradient';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FoodTypeSelector from '../components/Home/FoodTypeSelector';
+import BannerSlider from '../components/Home/BannerSlider.js';
+import FoodMenuFlatList from '../components/Home/FoodMenuFlatList.js';
 
 const MyComponent = () => {
   return (
-    <SafeAreaView className="px-4 py-2">
-      <View className="flex">
+    <SafeAreaView className=" flex-1 bg-white">
+      <LinearGradient colors={['#FFFFFF','#FC261B']}>
+      <View className="flex px-4 mb-4">
         <View className="flex flex-row items-center mt-4">
           <Ionicons name="location" size={24} color="gray" />
-          <Text className="text-gray-500 text-sm ml-2">
+          <Text className="text-[#3D3D3D] text-sm font-semibold ml-2">
             4102, Pretty View Lane, EWS Essel...
           </Text>
           <Image
@@ -27,16 +30,15 @@ const MyComponent = () => {
           />
         </View>
 
-        <View className="flex flex-row items-end my-4 space-x-2 mx-2">
-          <View className="flex flex-row w-4/5 items-center justify-center border-2 h-12 border-gray-200 rounded-xl p-1">
-            <Ionicons name="search" size={24} color="gray" className="mr-4" />
+        <View className="flex flex-row justify-center items-center my-4 space-x-2 mx-2">
+          <View className="flex flex-row w-4/5 items-center justify-center border bg-white h-12 border-gray-200 rounded-xl p-1">
+            <Ionicons name="search" size={24} color="gray" className="mx-4" />
             <TextInput
-              className="flex-1 text-gray-500"
+              className="flex-1 -mt-[2px]"
               placeholder="Find for food or restaurant..."
               placeholderTextColor="gray"
-              style={{textAlignVertical: 'top'}}
             />
-            <Ionicons name="mic" size={24} color="gray" />
+            <Ionicons name="mic-outline" size={24} color="red" />
           </View>
 
           <View>
@@ -52,6 +54,17 @@ const MyComponent = () => {
           </View>
         </View>
       </View>
+      </LinearGradient>
+      
+      <ScrollView className='-mt-6'>
+        <View className=' bg-white rounded-t-3xl'>
+        {/* <BannerSlider/> */}
+        <Text className='text-[#3D3D3D] text-lg font-semibold text-center'>
+          What would you like to order
+        </Text>
+        <FoodMenuFlatList/>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

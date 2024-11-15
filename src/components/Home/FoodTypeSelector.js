@@ -19,26 +19,34 @@ const FoodTypeSelector = ({ options, defaultOption }) => {
     };
   };
 
+  const getSelectedOptionColor = (optionValue) => {
+    const selectedOption = options.find((option) => option.value === optionValue);
+    return selectedOption ? selectedOption.color : '#000'; // Default color
+  };
+
   const selectedOptionClasses = getColorClasses(
     options.find((option) => option.value === selectedOption)
   );
 
   return (
     <View>
-      {/* Food Type Icon */}
-      <Pressable
+<Pressable
         onPress={() => setModalVisible(!modalVisible)}
-        className={`w-12 h-12 border-2 rounded-xl flex items-center justify-center ${selectedOptionClasses.borderColor}`}
+        className={`w-12 h-12 border-2 rounded-xl bg-white flex items-center justify-center`}
+        style={{ borderColor: getSelectedOptionColor(selectedOption) }}
       >
         <View
-          className={`border rounded-sm p-1 ${selectedOptionClasses.borderColor}`}
+          className="border rounded-sm p-1"
+          style={{ borderColor: getSelectedOptionColor(selectedOption) }}
         >
           <View
-            className={`rounded-full w-2 h-2 ${selectedOptionClasses.bgColor}`}
+            className="rounded-full w-2 h-2"
+            style={{ backgroundColor: getSelectedOptionColor(selectedOption) }}
           />
         </View>
         <Text
-          className={`text-[8px] text-center ${selectedOptionClasses.textColor}`}
+          className="text-[8px] text-center"
+          style={{ color: getSelectedOptionColor(selectedOption) }}
         >
           {selectedOption.includes('Pure')
             ? 'Veg'
