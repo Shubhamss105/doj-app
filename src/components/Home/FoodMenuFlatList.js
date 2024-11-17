@@ -16,10 +16,10 @@ const FoodItem = ({ title, image }) => (
     start={{ x: 0, y: 0 }}
     end={{ x: 0, y: 1 }}
 
-    className="flex items-center rounded-2xl mx-1 w-24 h-[85px] justify-center p-1"
+    className="flex items-center rounded-2xl mx-2 w-24 h-[85px] justify-center"
   >
     <Image source={image} className="w-24 h-16" resizeMode="contain" />
-    <Text className="text-center text-gray-800 text-xs font-medium mb-2 -mt-1 px-1" >
+    <Text className="text-center text-gray-800 text-xs font-semibold mb-2 -mt-1 px-1" >
       {title}
     </Text>
   </LinearGradient>
@@ -27,7 +27,7 @@ const FoodItem = ({ title, image }) => (
 
 export default function FoodMenuFlatList() {
   return (
-    <View className="flex-1 bg-white justify-center items-start my-4">
+    <View className="flex-1 bg-white justify-center items-start mt-4">
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}

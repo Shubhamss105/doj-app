@@ -2,9 +2,11 @@
 import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
-  container: {
+  gMargin: {
     padding: 16,
-    margin: 16,
+  },
+  gPadding: {
+    gPadding: 16,
   },
   text: {
     marginVertical: 8,

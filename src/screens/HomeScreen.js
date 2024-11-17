@@ -13,8 +13,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FoodTypeSelector from '../components/Home/FoodTypeSelector';
 import ImageBanner from '../components/Home/ImageBanner.js';
 import FoodMenuFlatList from '../components/Home/FoodMenuFlatList.js';
+import RecommendedFood from '../components/Home/RecommendedFood.js';
+// import { GlobalStyles } from './assets/styles.js';
 
-const MyComponent = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView className=" flex-1 bg-white">
       <LinearGradient colors={['#FFFFFF','#FC261B']}>
@@ -63,7 +65,10 @@ const MyComponent = () => {
           What would you like to order
         </Text>
 
+        <View>
         <FoodMenuFlatList/>
+        <RecommendedFood/>
+        </View>
 
         </View>
       </ScrollView>
@@ -71,4 +76,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default HomeScreen;
