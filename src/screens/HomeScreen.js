@@ -14,6 +14,7 @@ import FoodTypeSelector from '../components/Home/FoodTypeSelector';
 import ImageBanner from '../components/Home/ImageBanner.js';
 import FoodMenuFlatList from '../components/Home/FoodMenuFlatList.js';
 import RecommendedFood from '../components/Home/RecommendedFood.js';
+import ExploreSection from '../components/Home/ExploreSection.js';
 // import { GlobalStyles } from './assets/styles.js';
 
 const HomeScreen = () => {
@@ -68,6 +69,7 @@ const HomeScreen = () => {
         <View>
         <FoodMenuFlatList/>
         <RecommendedFood/>
+        <ExploreSection/>
         </View>
 
         </View>

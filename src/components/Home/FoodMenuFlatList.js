@@ -16,7 +16,7 @@ const FoodItem = ({ title, image }) => (
     start={{ x: 0, y: 0 }}
     end={{ x: 0, y: 1 }}
 
-    className="flex items-center rounded-2xl mx-2 w-24 h-[85px] justify-center"
+    className="flex items-center rounded-2xl mx-2 w-[88px] h-[85px] justify-center"
   >
     <Image source={image} className="w-24 h-16" resizeMode="contain" />
     <Text className="text-center text-gray-800 text-xs font-semibold mb-2 -mt-1 px-1" >
