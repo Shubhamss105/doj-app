@@ -26,7 +26,6 @@ const FoodItem = ({ title, subtitle, image }) => (
 export default function ExploreSection() {
   return (
     <View className="flex-1 bg-white mt-4">
-      {/* Title and Subtitle */}
       <View className="mx-4 mb-2">
         <Text className="text-lg text-black font-bold">Explore</Text>
       </View>

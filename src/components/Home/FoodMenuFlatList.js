@@ -27,6 +27,10 @@ const FoodItem = ({ title, image }) => (
 
 export default function FoodMenuFlatList() {
   return (
+    <View>
+      <Text className='text-[#757575] text-lg font-semibold text-center mt-4'>
+          What would you like to order
+        </Text>
     <View className="flex-1 bg-white justify-center items-start mt-4">
       <FlatList
         data={data}
@@ -37,6 +41,7 @@ export default function FoodMenuFlatList() {
         contentContainerStyle={{ paddingHorizontal: 8 }}
         style={{ height: 100 }}
       />
+    </View>
     </View>
   );
 }
