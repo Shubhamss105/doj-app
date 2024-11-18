@@ -63,19 +63,25 @@ const RecommendedFood = () => {
       </View>
 
       <View className="p-2">
-        <View className='flex flex-row items-center justify-between'>
-        <Text className="text-md text-black font-semibold">{item.name}</Text>
-        <View className="flex-row items-center">
-          <Ionicons name="location" size={8} color="gray" />
-          <Text className="text-[8px] text-gray-500 font-semibold">{item.distance}</Text>
+        <View className="flex flex-row items-center justify-between">
+          <Text className="text-md text-black font-semibold">{item.name}</Text>
+          <View className="flex-row items-center">
+            <Ionicons name="location" size={8} color="gray" />
+            <Text className="text-[8px] text-gray-500 font-semibold">
+              {item.distance}
+            </Text>
+          </View>
         </View>
-        </View>
-        <View className='flex flex-row items-center justify-between'>
-        <Text className="text-[8px] text-[#575757] font-semibold">{item.deliveryCost}</Text>
-        <View className="flex-row items-center space-x-1">
-        <Ionicons name="timer" size={10} color="red" />
-          <Text className="text-[8px] text-[#575757] font-semibold">{item.deliveryTime}</Text>
-        </View>
+        <View className="flex flex-row items-center justify-between">
+          <Text className="text-[8px] text-[#575757] font-semibold">
+            {item.deliveryCost}
+          </Text>
+          <View className="flex-row items-center space-x-1">
+            <Ionicons name="timer" size={10} color="red" />
+            <Text className="text-[8px] text-[#575757] font-semibold">
+              {item.deliveryTime}
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -83,9 +89,11 @@ const RecommendedFood = () => {
 
   return (
     <View>
-      <View className='flex flex-row items-center justify-between m-4 mt-0'>
-      <Text className="text-lg text-black font-bold">Recommended</Text>
-      <Text className="text-[10px] text-[#FC261B] font-semibold">See all</Text>
+      <View className="flex flex-row items-center justify-between m-4 mt-0">
+        <Text className="text-lg text-secondary font-bold">Recommended</Text>
+        <Text className="text-[10px] text-[#FC261B] font-semibold">
+          See all
+        </Text>
       </View>
       <FlatList
         data={data}

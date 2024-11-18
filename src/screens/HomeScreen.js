@@ -16,11 +16,13 @@ import FoodMenuFlatList from '../components/Home/FoodMenuFlatList.js';
 import RecommendedFood from '../components/Home/RecommendedFood.js';
 import ExploreSection from '../components/Home/ExploreSection.js';
 import Header from '../components/Home/Header.js';
+import RestaurantsList from '../components/Home/RestaurantsList.js';
+import RestaurantAdList from '../components/Home/RestaurantAdList.jsx';
 // import { GlobalStyles } from './assets/styles.js';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView className=" flex-1">
+    <SafeAreaView className=" flex-1 bg-white">
       <Header/>
       
       <ScrollView className='flex-1 -mt-6 rounded-t-3xl'>
@@ -29,7 +31,8 @@ const HomeScreen = () => {
         <FoodMenuFlatList/>
         <RecommendedFood/>
         <ExploreSection/>
-        <ExploreSection/>
+        <RestaurantsList/>
+        <RestaurantAdList/>
 
         </View>
       </ScrollView>
